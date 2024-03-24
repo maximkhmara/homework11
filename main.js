@@ -1,10 +1,9 @@
-function getSum() {
-  let counter = 0;
-  return function(num) {
-    return counter += num;
-  }
-}
-const count = getSum(); 
-console.log(count(3));   
-console.log(count(5));   
-console.log(count(20));
+const inputField = document.querySelector('.text-field');
+const hideDiv = document.querySelector('.hide-div');
+
+inputField.addEventListener('focus', function () {
+  hideDiv.classList.add('show');
+});
+inputField.addEventListener('blur', function () {
+  hideDiv.classList.remove('show');
+});
